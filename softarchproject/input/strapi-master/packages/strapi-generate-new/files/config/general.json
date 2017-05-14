@@ -1,0 +1,11 @@
+{
+  "admin": "/admin",
+  "favicon": {
+    "path": "favicon.ico",
+    "maxAge": 86400000
+  },
+  "prefix": "",
+  "static": true,
+  "views": false,
+  "websockets": false
+}

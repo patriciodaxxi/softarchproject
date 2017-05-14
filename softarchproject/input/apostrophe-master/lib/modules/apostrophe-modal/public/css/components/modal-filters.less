@@ -1,0 +1,73 @@
+.apos-ui.apos-modal .apos-modal-header .apos-modal-filters,
+.apos-ui.apos-modal .apos-modal-body .apos-modal-filters
+{
+
+	.apos-pill
+	{
+		margin-top: @apos-margin-2;
+	}
+
+  .apos-modal-filter {
+    .apos-field-input-select-wrapper
+    {
+      display: inline-block;
+      padding: 20px 10px 10px 10px;
+      border-radius: 4px;
+      margin-right: 20px;
+      select
+      {
+        padding: 8px 25px 7px 10px;
+      }
+      &::after
+      {
+        right: 20px;
+      }
+    }
+  }
+
+	.apos-modal-filters-toggles
+	{
+		float: left;
+		width: 100%;
+		
+		.apos-pill
+		{
+			margin-right: @apos-margin-2;
+			margin-bottom: @apos-margin-1;
+		}
+		margin-bottom: -@apos-margin-1;
+	}
+
+	.apos-modal-filters-search
+	{
+		width: 30%;
+		float: right;
+		input
+		{
+			position: relative;
+			margin-top: @apos-padding-2;
+			max-width: 314px;
+			.apos-rounded;
+
+			padding: (@apos-padding-1 + 1.5px) @apos-padding-2;
+			float: right;
+
+			font-size: 13px;
+			line-height: 13px;
+			@media @apos-breakpoint-desktop-xl
+			{
+				font-size: 14px;
+				line-height: 14px;
+			}
+		}
+	}
+}
+
+.apos-ui.apos-modal .apos-modal-body .apos-modal-filters .apos-modal-filters-toggles
+{
+	.apos-pill
+	{
+		margin-right: 0;
+		margin-left: @apos-margin-2;
+	}
+}

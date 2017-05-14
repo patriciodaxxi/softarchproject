@@ -1,0 +1,93 @@
+{
+  "name": "enduro",
+  "version": "1.4.16",
+  "description": "Minimalistic, lean & mean static page generator / cms",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.0.0-rc.2",
+    "bluebird": "^3.1.5",
+    "browser-sync": "^2.11.1",
+    "chalk": "^1.1.1",
+    "connect-multiparty": "^2.0.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.7.1",
+    "dir-compare": "^1.0.1",
+    "enduro_admin": "1.0.61",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "extend": "^3.0.0",
+    "fs-extra": "^2.0.0",
+    "fstream": "^1.0.10",
+    "glob": "^7.0.3",
+    "glob-promise": "^3.1.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-define-module": "^0.1.4",
+    "gulp-filter-by": "^1.2.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-iconfont-css": "^2.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-bulk-import": "^1.0.1",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-watch": "^4.3.5",
+    "gulp-wrap": "^0.13.0",
+    "gulp.spritesmith": "^6.2.0",
+    "handlebars": "^4.0.5",
+    "inquirer": "^3.0.1",
+    "lodash": "^4.15.0",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.13.0",
+    "multi-glob": "^1.0.1",
+    "ncp": "^2.0.0",
+    "npm": "^4.2.0",
+    "opn": "^4.0.2",
+    "password-hash": "^1.2.2",
+    "promised-handlebars": "git+https://github.com/Gottwik/promised-handlebars.git",
+    "request": "^2.72.0",
+    "request-promise": "^4.1.1",
+    "require-from-string": "^1.1.0",
+    "rewire": "^2.5.1",
+    "rimraf": "^2.5.2",
+    "s3": "^4.4.0",
+    "stringify-object": "^3.1.0",
+    "tar": "^2.2.1",
+    "urldecode": "^1.0.1",
+    "yargs": "^7.0.1"
+  },
+  "scripts": {
+    "test": "mocha --recursive --bail",
+    "to": "mocha --recursive --bail --grep online_test -i"
+  },
+  "bin": {
+    "enduro": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gottwik/enduro"
+  },
+  "author": "Martin Gottweis",
+  "keywords": [
+    "cms",
+    "page generator",
+    "handlebars",
+    "static page generator"
+  ],
+  "homepage": "www.endurojs.com",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.8",
+    "istanbul": "^0.4.2",
+    "mocha": "^3.0.2",
+    "mocha-lcov-reporter": "^1.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Gottwik/Enduro/issues"
+  },
+  "engines": {
+    "node": ">= 4"
+  }
+}

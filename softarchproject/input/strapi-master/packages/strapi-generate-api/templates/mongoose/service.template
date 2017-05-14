@@ -1,0 +1,68 @@
+'use strict';
+
+/**
+ * <%= filename %> service
+ *
+ * @description: A set of functions similar to controller's actions to avoid code duplication.
+ */
+
+// Public dependencies.
+const _ = require('lodash');
+
+module.exports = {
+
+  /**
+   * Promise to fetch all <%= humanizeSubIdPluralized || humanizeSubId || humanizeIdPluralized %>.
+   *
+   * @return {Promise}
+   */
+
+  fetchAll: (params) => {
+    return <%= globalID %>.find(params).populate(_.keys(_.pickBy(strapi.models.<%= humanizeSubId || humanizeId %>.attributes, { autoPopulate: true })).join(' '));
+  },
+
+  /**
+   * Promise to fetch a/an <%= subId || id %>.
+   *
+   * @return {Promise}
+   */
+
+  fetch: (params) => {
+    return <%= globalID %>.findOne(params).populate(_.keys(_.pickBy(strapi.models.<%= humanizeSubId || humanizeId %>.attributes, { autoPopulate: true })).join(' '));
+  },
+
+  /**
+   * Promise to add a/an <%= subId || id %>.
+   *
+   * @return {Promise}
+   */
+
+  add: (values) => {
+    return <%= humanizeSubId || humanizeId %>.create(values);
+  },
+
+  /**
+   * Promise to edit a/an <%= subId || id %>.
+   *
+   * @return {Promise}
+   */
+
+  edit: (params, values) => {
+    // Note: The current method will return the full response of Mongo.
+    // To get the updated object, you have to execute the `findOne()` method
+    // or use the `findOneOrUpdate()` method with `{ new:true }` option.
+    return <%= globalID %>.update(params, values, { multi: true });
+  },
+
+  /**
+   * Promise to remove a/an <%= subId || id %>.
+   *
+   * @return {Promise}
+   */
+
+  remove: params => {
+    // Note: To get the full response of Mongo, use the `remove()` method
+    // or add spent the parameter `{ passRawResult: true }` as second argument.
+    return <%= globalID %>.findOneAndRemove(params, {});
+  }
+};
